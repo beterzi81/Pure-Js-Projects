@@ -14,8 +14,8 @@ const mouse = {
 }
 
 window.addEventListener('mousemove', function(event){
-    mouse.x = event.x;
-    mouse.y = event.y;
+    mouse.x = event.x ; //- (window.innerWidth * 33)/100;
+    mouse.y = event.y ; //- (window.innerHeight * 33)/100;  bu hareketlerle de canvasın boyutunu ve pozisyonunu değiştirdiğinde mouse optimizasyonunu sağlayabilriz
     mouse.radius = 50;
     // console.log(mouse.x,mouse.y);
 })
@@ -29,15 +29,15 @@ function getRandomColor() {
   }
 
 ctx.fillStyle='White';
-ctx.font = '15px Oscine';
-ctx.fillText('HOŞGELDİNİZ',0,23);
+ctx.font = '15px Giulia';
+ctx.fillText('HOŞGELDİNİZ',10,23);
 const textCoordinates = ctx.getImageData(0,0,canvas.width,canvas.height);
 
 class Particle {//parçacıklar yani dotların özellikleri, her bir particle çağırdığımızda x ve y değerleri alınıp uygun şekilde bir dot oluşturuluyor
     constructor(x,y){
         this.x = x;
         this.y = y;
-        this.size = 3;
+        this.size = 1;
         this.baseX = this.x;//her dot için ilk verilen x konumunu tutuyor.
         this.baseY = this.y;
         this.density = (Math.random() * 40) + 5;//dotların ağırlığını belirliyoruz. her dotun kendine has bir ağırlığı oluyor-1 ile 30 arasında-
@@ -87,7 +87,7 @@ function init() {
             if(textCoordinates.data[(y * 4 * textCoordinates.width) + (x * 4) + 3] > 128){//data özelliği 40000 boyutlu bir dizi,  Uint8ClampedArray deniyor.     !!!!YAZARKEN KEŞFETTİĞİM BİR HATAMDA EĞER  < 128 YAPARSAK HERYERE DOT ÇİZİP HARFİ BOŞ BIRAKIYOR EĞER > 128 YAPARSAK SADECE HARFİ ÇİZİYOR.!!!
                 let positionX = x + adjustX;
                 let positionY = y + adjustY;
-                particleArray.push(new Particle(positionX * 10,positionY * 10 ));
+                particleArray.push(new Particle(positionX * 5,positionY * 5 ));//dotlar arasındaki boşlukları bu çarpma işemiyle düzenleyebiliriz
             }
 
         }

@@ -7,7 +7,7 @@
 
 body{
     overflow: hidden;
-    background: black;
+    background: white;
 
 }
 
@@ -15,4 +15,5 @@ canvas{
     position: absolute;
     top: 0;
     left: 0;
+    background: black;
 }
