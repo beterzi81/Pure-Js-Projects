@@ -30,7 +30,7 @@ function getRandomColor() {//rastgele bir renk kodu geriye döndüren bir fonksi
 
 ctx.fillStyle='White';
 ctx.font = '18px Giulia';
-ctx.fillText('HOŞGELDİNİZ',0,23);//buradaki yazıları değiştirerek istediğiniz herhangibi bir şey yazabilirsiniz
+ctx.fillText('HÜSEYİN',0,23);//buradaki yazıları değiştirerek istediğiniz herhangibi bir şey yazabilirsiniz
 ctx.fillText('NASILSINIZ?',10,53);
 const textCoordinates = ctx.getImageData(0,0,canvas.width,canvas.height);
 
