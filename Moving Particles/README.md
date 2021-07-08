@@ -4,7 +4,7 @@ Moving articles, yani türkçesiyle hareketli parçacıklar, javascript kullanı
 
 ## Demo
 
-Sitenin demosunu [buradan](https://beterzi81.github.io/Moving-Particles/) deneyebilir, bir göz atabilirsiniz.
+Dosyaları indirerek yahut kodları kopyalayarak kendi bilgisayarınızda çalıştırabilirsiniz.
 
 
 ## Kullanım ve özelleştirme
