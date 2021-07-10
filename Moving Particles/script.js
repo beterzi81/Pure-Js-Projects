@@ -13,6 +13,12 @@ const mouse = {
     radius: 450
 }
 
+window.addEventListener('resize',function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+
 window.addEventListener('mousemove', function(event){
     mouse.x = event.x ; //- (window.innerWidth * 33)/100;
     mouse.y = event.y ; //- (window.innerHeight * 33)/100;  bu hareketlerle de canvasın boyutunu ve pozisyonunu değiştirdiğinde mouse optimizasyonunu sağlayabilriz
