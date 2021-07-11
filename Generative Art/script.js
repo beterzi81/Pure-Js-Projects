@@ -2,6 +2,7 @@ const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+ctx.globalCompositeOperation = 'destination-over';//yazı yazıldığında daha anlaşılır bir görüntü ortaya çıkar.
 
 const edge = 40;
 let drawing = false;
